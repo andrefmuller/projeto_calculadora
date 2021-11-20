@@ -1,23 +1,23 @@
-var calculo = `0`
-var soma = ``
-var previa = ``
-var inicio = ``
-document.getElementById("resultado").value = calculo 
+var calculo = ""
+var soma = ""
+document.getElementById("campo_num").value = calculo
+var n1 = 0
+var n2 = 0
+
 
 function botao1(){
-    calculo += `1`
-    document.getElementById("resultado").value = calculo
-
+    calculo += 1
+    document.getElementById("campo_num").value = calculo
 }
 
 function botao2(){
-    calculo += `2`
-    document.getElementById("resultado").value = calculo
+    calculo += 2
+    document.getElementById("campo_num").value = calculo
 }
 
 function botao3(){
     calculo += `3`
-    document.getElementById("resultado").value = calculo
+    document.getElementById("campo_num").value = calculo
 }
 
 function botao4(){
@@ -56,12 +56,6 @@ function botao0(){
 }
 
 function botao_mais(){
-    previa += `${calculo} + `
-    calculo = ""
-    document.getElementById("previa").value = 
-    document.getElementById("resultado").value = calculo
-    //document.getElementById("previa").value += previa
-    //window.alert(`calculo vale ${calculo}`)
     
 }
 
@@ -78,11 +72,12 @@ function botao_divide(){
 }
 
 function botao_ac(){
+    soma = ""
     calculo = ""
     previa = ""
     //window.alert(`Agora a variável calculo vale ${calculo} e a variável previa vale ${previa}. `)
-    document.getElementById("resultado").value = `0`
-    document.getElementById("previa").value = ``
+    document.getElementById("campo_num").value = ""
+    document.getElementById("previa").value = ""
 }
 
 function calcula(){
